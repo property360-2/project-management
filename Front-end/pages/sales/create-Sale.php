@@ -1,6 +1,9 @@
 <?php
 // Include the database connection
-require_once '../../Back-end/Database-connector.php';
+// require_once '../../Back-end/Database-connector.php';
+require_once 'C:/xampp/htdocs/project_management/Back-end/Database-connector.php';
+
+
 
 // Enable exception mode for MySQLi
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
@@ -9,7 +12,7 @@ try {
     // Check if the form has been submitted
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Get the values from the form
-        $name = $_POST['name'];
+        $sale = $_POST['name'];
         $username = $_POST['username'];
         $password = $_POST['password'];
         $role = $_POST['role'];

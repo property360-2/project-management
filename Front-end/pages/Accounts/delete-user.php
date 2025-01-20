@@ -1,6 +1,8 @@
 <?php
 // Include the database connection
-require_once '../../Back-end/Database-connector.php';
+// require_once '../../Back-end/Database-connector.php';
+require_once 'C:/xampp/htdocs/project_management/Back-end/Database-connector.php';
+
 
 // Enable exception mode for MySQLi
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);

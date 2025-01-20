@@ -1,6 +1,8 @@
 <?php
 // Include the database connection
-require_once '../../Back-end/Database-connector.php';
+// require_once '../../Back-end/Database-connector.php';
+require_once 'C:/xampp/htdocs/project_management/Back-end/Database-connector.php';
+
 
 // Check if the user ID is provided in the URL
 if (!isset($_GET['id'])) {

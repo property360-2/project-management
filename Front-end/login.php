@@ -1,5 +1,6 @@
 <?php
-require_once '../../Back-end/Database-connector.php';
+// require_once '../../Back-end/Database-connector.php';
+require_once 'C:/xampp/htdocs/project_management/Back-end/Database-connector.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = trim($_POST['username']);
@@ -25,11 +26,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Verify the password
         if (password_verify($password, $user['password'])) {
             // Redirect based on user role
+            // Redirect based on user role
             if ($user['role'] === 'admin') {
-                header("Location: ../../Front-end/Accounts/Account-Management.php");
+                header("Location: http://localhost/project_management/Front-end/navigation-for-admin.php");
                 exit;
             } else {
-                header("Location: ../../Front-end/sales/sales.php");
+                header("Location: http://localhost/project_management/Front-end/pages/sales/sales.php");
                 exit;
             }
         } else {
@@ -39,7 +41,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Invalid username or password.";
     }
 
-    $stmt->close();
     $conn->close();
 }
 ?>
